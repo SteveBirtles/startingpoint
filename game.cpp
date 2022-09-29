@@ -31,7 +31,7 @@ class Game : public olc::PixelGameEngine {
     }
 
     inputs();
-    processes();
+    processes(fElapsedTime);
     outputs();
 
     if (GetKey(olc::Key::ESCAPE).bPressed) {
@@ -54,7 +54,7 @@ class Game : public olc::PixelGameEngine {
     }
   }
 
-  void processes() {
+  void processes(float fElapsedTime) {
     /*
       Game logic goes here
     */
